@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from '../atoms/Logo'
 import SearchBar from '../molecules/SearchBar'
@@ -8,11 +9,13 @@ display: flex;
 align-items: center;
 height: 70px;
 width: 100%;
+padding: 0;
+margin: 0;
 background-color: white;
 border-bottom: 1px #e6e6e6 solid;
 position: sticky;
 top: 0;
-z-index: 999;
+z-index: 999999;
 `
 
 const SideSpace = styled.div`
@@ -52,7 +55,9 @@ const Header = () => {
   return (
     <StyledHeader>
       <SideSpace>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </SideSpace>
       <ToolsWrapper>
         <SearchBar />

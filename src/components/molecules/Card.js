@@ -7,6 +7,7 @@ height: 400px;
 margin: 10px;
 position: relative;
 border: 3px solid #e6e6e6;
+cursor: pointer;
 p{
   position: absolute;
   bottom: 10px;

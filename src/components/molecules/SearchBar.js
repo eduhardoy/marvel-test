@@ -14,6 +14,7 @@ width: 20px;
 height: auto;
 margin: 10px;
 }
+
 input{
   height: 80%;
   width: 160px;

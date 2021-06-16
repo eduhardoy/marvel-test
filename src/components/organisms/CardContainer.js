@@ -6,6 +6,7 @@ import { getCharacters } from '../../api/characters';
 import FavButton from '../atoms/FavButton';
 
 import Card from '../molecules/Card';
+import InfoModal from '../templates/InfoModal';
 
 
 const StyledCardContainer = styled.div`
@@ -26,7 +27,7 @@ const CardBackground = styled.div`
 }
 `
 
-const CardContainer = () => {
+const CardContainer = ({ openmodal }) => {
   const [characters, setCharacters] = useState({});
 
   useEffect(() => {
@@ -44,12 +45,15 @@ const CardContainer = () => {
   return (
     <StyledCardContainer>
         {characters?.data?.results?.map(item => (
-          <Card key={item.id.toString()}>
+          <Card key={item.id.toString()} onClick={openmodal}>
             <FavButton />
             <p>{item.name}</p>
             <CardBackground>
               <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt="" />
             </CardBackground>
+            <InfoModal>
+              <h1>{item.name}</h1>
+            </InfoModal>
           </Card>
         ))}
     </StyledCardContainer>
