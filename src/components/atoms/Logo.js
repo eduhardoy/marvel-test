@@ -7,6 +7,7 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+cursor: pointer;
 img{
   margin: 15px;
   height: 30px;

@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledCloseButton = styled.button``
+const StyledCloseButton = styled.button`
+cursor: pointer;
+`
 
 const CloseButton = () => {
   return (

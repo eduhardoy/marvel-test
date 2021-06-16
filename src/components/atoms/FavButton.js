@@ -8,6 +8,7 @@ right: 5px;
 border: none;
 outline: none;
 background-color: transparent;
+cursor: pointer;
 img{
   width: auto;
   height: 20px;
